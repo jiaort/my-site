@@ -1,0 +1,11 @@
+my_site:
+    image: centos-django:1557050764
+    container_name: my_site
+    restart: always
+    volumes:
+        - /home/data/docker/my_site/project:/opt/django/project
+        - /home/data/docker/my_site/logs:/opt/django/logs
+        - /home/data/docker/my_site/venv:/opt/django/venv
+        - /root/.ssh:/root/.ssh
+    ports:
+        - "8090:8000"
