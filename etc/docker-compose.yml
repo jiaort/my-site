@@ -8,4 +8,4 @@ my_site:
         - /home/data/docker/my_site/venv:/opt/django/venv
         - /root/.ssh:/root/.ssh
     ports:
-        - "8090:8000"
+        - "8092:8000"
