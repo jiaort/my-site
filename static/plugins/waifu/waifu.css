@@ -54,6 +54,7 @@
     color: #5b6c7d;
     line-height: 20px;
     transition: 0.2s;
+    font-family: 'Flat-UI-Icons'!important;
 }
 .waifu-tool span:hover {
     color: #34495e;
