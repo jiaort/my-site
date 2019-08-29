@@ -14,7 +14,7 @@
   <meta name="description" content="焦润涛、个人博客、焦润涛博客、Python、Django、MySql、uWSGI、HTML、Jquery、Redis、数据库、服务器、性能优化。记录和分享学习的心得,感悟生活,留住感动,静静寻觅生活的美好">
   {{ form.media }}
   <link rel="shortcut icon" href="/static/css/logo.png" type="image/x-icon" />
-
+  <link rel="stylesheet" type="text/css" href="/static/plugins/waifu/waifu.css"/>
   {% include "blog/css.html" %}
   {% include "blog/js.html" %}
 
@@ -124,6 +124,19 @@ $(function () {
 
     <div id="player"></div>  <!-- 音乐播放器 -->
 
+    <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+      <div class="waifu-tool">
+          <span class="fui-home"></span>
+          <span class="fui-chat"></span>
+          <span class="fui-eye"></span>
+          <span class="fui-user"></span>
+          <span class="fui-photo"></span>
+          <span class="fui-info-circle"></span>
+          <span class="fui-cross"></span>
+      </div>
+    </div>
     <center>
       {% include "blog/footer.html" %}
     </center>
@@ -189,6 +202,9 @@ $(function () {
   <!-- activate-power-mode -->
   <script src="/static/js/activate-power-mode.js"></script>
   <script type="text/javascript" src="/static/js/canvas-nest.js" count="100"></script>
+  <script src="/static/plugins/waifu/waifu-tips.js"></script>
+  <script src="/static/plugins/waifu/live2d.js"></script>
+  <script type="text/javascript">initModel("/static/plugins/waifu/")</script>
   <script>
     POWERMODE.colorful = true; // make power mode colorful
     POWERMODE.shake = false; // turn off shake
