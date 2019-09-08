@@ -121,13 +121,6 @@
     </div>
   </section>
 </div>
-<!-- 评论框div -->
-<div id="vcomments" class="widget widget_recent_comments">
-  <!-- 评论表单 -->
-  {% include "blog/comment_form.html" %}
-  <!-- 评论列表 -->
-  {% include "blog/comment_list.html" %}
-</div>
 <!-- 已加友链 -->
 <div>
   <section class="widget widget_recent_comments">
@@ -149,7 +142,12 @@
   </section>
 </div>
 
+<!-- 评论框div -->
 <div id="vcomments" class="widget widget_recent_comments">
+  <!-- 评论表单 -->
+  {% include "blog/comment_form.html" %}
+  <!-- 评论列表 -->
+  {% include "blog/comment_list.html" %}
 </div>
 <script type="text/javascript" src="/static/js/comments.js"></script>
 <!-- <script src="/static/js/valine.js"></script> -->
