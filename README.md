@@ -64,7 +64,7 @@ python manage.py createsuperuser
 
 # 注意事项
 1. 本文档可能尚有遗漏或者不当之处，如遇问题，如造成困惑请尽量自行处理或者联系作者，敬请谅解。
-2. 项目中涉及到的配置文件，如七牛云的 `access_key` 和 `secret_key`，以及leancloud账号的配置，烦请自行注册账号修改，否则侵权必究。
+2. 项目中涉及到的配置文件，如七牛云的 `access_key` 和 `secret_key`账号的配置，烦请自行注册账号修改，否则侵权必究。
 
 # 联系我
 1. 邮箱：heavycross@163.com
