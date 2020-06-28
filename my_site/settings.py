@@ -156,7 +156,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-ADMINS = {('Daniel', '1401358759@qq.com')}
+ADMINS = {('jiaort', 'heavycross@163.com')}
 
 TEMPLATES = [
     {
