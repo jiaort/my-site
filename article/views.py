@@ -88,7 +88,7 @@ def detail(request, year, month, day, id):
         article = Article.objects.get(id=id)
         article.count += 1
         article.save(update_fields=['count'])
-        statis_count = Article.objects.aggregate(
+        statis_count = Article.objects.filter(status=BlogStatus.PUBLISHED).aggregate(
             blog_count=Count('id'),
             read_count=Sum('count'),
             tags_count=Count('tags', distinct=True)
@@ -200,7 +200,7 @@ class RSSFeed(Feed):
 
     @classmethod
     def items(cls):
-        return Article.objects.order_by('-publish_time')
+        return Article.objects.filter(status=BlogStatus.PUBLISHED).order_by('-publish_time')
 
     def item_title(self, item):
         return item.title
@@ -225,7 +225,7 @@ def blog_search(request):
     date_list = get_date_list('tmp_date_list')
     error = False
 
-    query = Q()
+    query = Q(status=BlogStatus.PUBLISHED)
     s = request.GET.get('s') or ""
     if s:
         query &= (Q(title__icontains=s) | Q(classification__name=s) | Q(tags__name=s))
