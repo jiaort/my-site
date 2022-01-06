@@ -34,7 +34,7 @@ DjangoUeditor==1.8.143
 aliyun-python-sdk-core==2.13.1
 aliyun-python-sdk-kms==2.5.0
 oss2==2.5.0
-celery==4.2.1
+celery==5.2.2
 mistune==0.8.4
 markdown==3.0.1
 django-redis==4.10.0
