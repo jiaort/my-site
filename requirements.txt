@@ -39,6 +39,6 @@ mistune==0.8.4
 markdown==3.0.1
 django-redis==4.10.0
 redis==2.10.6
-supervisor==3.3.1
+supervisor==3.3.3
 kombu==4.2.1
 mysqlclient==1.4.2
